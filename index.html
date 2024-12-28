@@ -28,6 +28,39 @@
 		nav .socialMedia img{
 			width: 2.5rem;
 		}
+
+
+		@media(max-width: 1080px){
+		    #openBtn{
+		        display: block;
+		    }
+		    nav{
+		        position: absolute;
+		        right: calc(100vw * -1);
+		        top: 4rem;
+		        width: 90%;
+		        padding-top: 3rem;
+		        height: calc(100vh - 4rem);
+		        background-color: blueviolet;
+		        border-radius: 2rem 0  0 2rem;
+		        
+		        flex-direction: column;
+		        gap: 2rem;
+		        transition: all 0.5s ease;
+		    }
+		    nav a{
+		        font-size: 1.5rem;
+		    }
+			nav .socialMedia{
+				display: flex;
+			}
+		    .active{
+		        background-color: rgb(230, 230, 230);
+		        border-radius: 1rem;
+		        color: black;
+		        font-weight: 600;
+		    }
+		}
 	</style>
 </head>
 <body>
