@@ -4,39 +4,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio - Harshith KM</title>
-	<a href="https://www.flaticon.com/free-icons/python" title="python icons"></a>
-	
+
 	<link rel="stylesheet" href="./styles/style.css">
 	<link rel="stylesheet" href="./styles/intro.css">
 	<link rel="stylesheet" href="./styles/skills.css">
 	<link rel="stylesheet" href="./styles/projects.css">
 	<link rel="stylesheet" href="./styles/education.css">
 	<link rel="stylesheet" href="./styles/contactme.css">
-	<style>
-		nav .socialMedia{
-		    display: none;
-		    justify-content: center;
-		    gap: 1rem;
-		}
-		nav .socialMedia a{
-			font-size: 1rem;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: .5rem;
-		}
-		nav .socialMedia img{
-			width: 2.5rem;
-		}
-	</style>
+	
 </head>
 <body>
 	<header>
 		<h1>Portfolio</h1>
-		
 		<button id="openBtn" onclick="showMenu()">≡</button>
 		<button id="closeBtn" onclick="closeMenu()">×</button>
-		
 		<nav id="nav">
 			<a  id="intro" onclick="activate(0)" >Introduction</a>
 			<a  id="skills" onclick="activate(1)" >Skills</a>
@@ -72,8 +53,6 @@
 					</p>
 				</div>
 			</div>
-			
-			
 		</section>
 
 		<section id="Skills">
@@ -92,7 +71,6 @@
 						<span>MERN </span>
 						<span><img src="./img/xampp.png" alt="">Web-development using PHP & MySQL</span>
 					</div>
-					
 				</div>
 				<div class="skillSet2 skillSet">
 					<div class="programmingLanguages skillCategory">
@@ -116,7 +94,6 @@
 						<span><img src="./img/vscode.png" alt="">VS-Code</span>
 						<span><img src="./img/pycharm.png" alt="">PyCharm</span>
 					</div>
-					
 					<div class="areasOfInterests skillCategory">
 						<h1>Areas of Interests</h1>
 						<span><img src="./img/DSA.png" alt="">Data Structure & Algorithms</span>
@@ -155,8 +132,7 @@
 					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum eaque pariatur similique illo corrupti iste voluptate nesciunt debitis error, tempora dolor et minima asperiores, officia eum ipsam recusandae reprehenderit animi eveniet cupiditate commodi explicabo. Eveniet itaque omnis delectus eaque laudantium magnam labore aperiam? Non possimus officia nostrum eos eveniet aperiam?</p>
 					<a href="https://github.com/harshith-km/water-wise">> GitHub: Source Code</a>
 				</div>
-				
-				
+					
 				<div class="contentNest project">
 					<h1>Content Nest</h1>
 					<div class="sliderWrapper">
@@ -197,9 +173,7 @@
 						<h1>Government First Grade College, Tumkur</h1>
 						<h3>Bachelor of Computer Applications</h3> <span class="cgpa">CGPA: 7.89/10</span>
 					</div>
-					
-				</div>
-				
+				</div>				
 				<div class="pcmc">
 					<div class="duration">
 						<span>JUN - 2019</span>
@@ -238,42 +212,6 @@
 		</section> 
 	</main>
 
-
-<script>
-// const main = document.getElementById("main");
-
-// const Introduction = document.getElementById("Introduction");
-// const Skills = document.getElementById("Skills");
-// const Projects = document.getElementById("Projects");
-// const Education = document.getElementById("Education");
-// const contact = document.getElementById("contact");
-
-// const sections = [Introduction, Skills, Projects, Education, contact];
-
-// let active = 0;
-// let isScrolling = false;
-
-// main.addEventListener('wheel', function(event) {
-//     if (isScrolling) return; // Exit if already scrolling
-
-//     if (event.deltaY > 0 && active < sections.length - 1) {
-//         isScrolling = true;
-//         active++;
-//         sections[active].scrollIntoView({ behavior: "smooth" });
-//     } else if (event.deltaY < 0 && active > 0) {
-//         isScrolling = true;
-//         active--;
-//         sections[active].scrollIntoView({ behavior: "smooth" });
-//     }
-
-//     // Unlock scrolling after the animation completes
-//     setTimeout(() => {
-//         isScrolling = false;
-//     }, 700); // Adjust the timeout based on your scroll animation duration
-// });
-
-
-</script>
 <script src="script.js" > </script>
 </body>
 </html>
