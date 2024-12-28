@@ -56,7 +56,8 @@ nav a:hover{
 }
 main{
     height: calc(100vh - 4rem);
-    overflow-y:auto;
+    /* overflow-y:auto; */
+    overflow: hidden;
 }
 section{
     background-color: rgb(230, 230, 230);

@@ -4,8 +4,6 @@
     height: 80%;
     display: flex;
     justify-content: space-between;
-    /* border: 2px solid blue; */
-
 }
 .wbms, .contentNest{
     width: 45%;
@@ -19,8 +17,21 @@
 }
 .projectsWrapper a{
     font-size: 1.5rem;
+    color: blue;
+    
 }
-
+.projectsWrapper p{
+    margin-bottom: 1rem;
+}
+.projectsWrapper a:hover{
+    font-weight: 600;
+}
+.projectsWrapper h1{
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    color: rgb(80, 80, 80);
+}
 
 .sliderWrapper{
     display: flex;
@@ -31,6 +42,7 @@
 }
 .arrow{
     font-size: 3rem;
+    user-select: none;
 }
 .arrow:hover{
     cursor: pointer;
@@ -40,16 +52,17 @@
     height: 470px;
 
     overflow: hidden;
-    /* border: 2px solid red; */
 
 }
 .frame{
     display: flex;
     width: fit-content;
+    transition: transform 0.7s ease-in-out;
 
 }
 .frame img{
     margin: 0;
     padding: 0;
     width: 100%;
+    border-radius: 10px;
 }

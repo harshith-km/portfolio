@@ -47,31 +47,95 @@ function handleSubmit(e) {
 }
 
 // image sliding
-const left = document.getElementById("left");
-const right = document.getElementById("right");
-const frame = document.getElementById("frame");
-// const image = document.querySelectorAll("#image");
-const slider = document.getElementById("slider");
-const imgWidth = slider.clientWidth;
+// const left = document.getElementById("left");
+// const right = document.getElementById("right");
+// const frame = document.getElementById("frame");
+// // const image = document.querySelectorAll("#image");
+// const slider = document.getElementById("slider");
+// const imgWidth = slider.clientWidth;
 
-let sliderPos = 0;
+// let sliderPos = 0;
 
-right.addEventListener("click", () => {
-    if (sliderPos > -(11 * imgWidth)) {
-        sliderPos -= imgWidth;
-        frame.style.transform = `translateX(${sliderPos}px)`;
-    } else {
-        sliderPos = 0;
-        frame.style.transform = `translateX(${sliderPos}px)`;
-    }
-});
+// right.addEventListener("click", () => {
+//     if (sliderPos > -(11 * imgWidth)) {
+//         sliderPos -= imgWidth;
+//         frame.style.transform = `translateX(${sliderPos}px)`;
+//     } else {
+//         sliderPos = 0;
+//         frame.style.transform = `translateX(${sliderPos}px)`;
+//     }
+// });
 
-left.addEventListener("click", () => {
-    if (sliderPos < 0) {
-        sliderPos += imgWidth;
-        frame.style.transform = `translateX(${sliderPos}px)`;
-    } else {
-        sliderPos = -11 * imgWidth;
-        frame.style.transform = `translateX(${sliderPos}px)`;
-    }
-});
+// left.addEventListener("click", () => {
+//     if (sliderPos < 0) {
+//         sliderPos += imgWidth;
+//         frame.style.transform = `translateX(${sliderPos}px)`;
+//     } else {
+//         sliderPos = -11 * imgWidth;
+//         frame.style.transform = `translateX(${sliderPos}px)`;
+//     }
+// });
+
+function createSlider(leftArrow, rightArrow, frame, slider) {
+    const imgWidth = slider.clientWidth;
+    let sliderPos = 0;
+    let autoSlideInterval;
+
+    const autoSlide = () => {
+        if (sliderPos > -(11 * imgWidth)) {
+            sliderPos -= imgWidth;
+            frame.style.transform = `translateX(${sliderPos}px)`;
+        } else {
+            sliderPos = 0;
+            frame.style.transform = `translateX(${sliderPos}px)`;
+        }
+    };
+
+    autoSlideInterval = setInterval(autoSlide, 1700); // Adjust interval as needed
+
+    slider.addEventListener("mouseover", () => {
+        clearInterval(autoSlideInterval);
+    });
+
+    slider.addEventListener("mouseout", () => {
+        autoSlideInterval = setInterval(autoSlide, 1700);
+    });
+
+    rightArrow.addEventListener("click", () => {
+        if (sliderPos > -(11 * imgWidth)) {
+            sliderPos -= imgWidth;
+            frame.style.transform = `translateX(${sliderPos}px)`;
+        } else {
+            sliderPos = 0;
+            frame.style.transform = `translateX(${sliderPos}px)`;
+        }
+    });
+
+    leftArrow.addEventListener("click", () => {
+        if (sliderPos < 0) {
+            sliderPos += imgWidth;
+            frame.style.transform = `translateX(${sliderPos}px)`;
+        } else {
+            sliderPos = -11 * imgWidth;
+            frame.style.transform = `translateX(${sliderPos}px)`;
+        }
+    });
+}
+
+// Get elements for the first slider (Water Wise)
+const leftArrow1 = document.getElementById("left-w");
+const rightArrow1 = document.getElementById("right-w");
+const frame1 = document.getElementById("frame-w");
+const slider1 = document.getElementById("slider-w");
+
+// Create the first slider
+createSlider(leftArrow1, rightArrow1, frame1, slider1);
+
+// Get elements for the second slider (Content Nest)
+const leftArrow2 = document.getElementById("left-c");
+const rightArrow2 = document.getElementById("right-c");
+const frame2 = document.getElementById("frame-c");
+const slider2 = document.getElementById("slider-c");
+
+// Create the second slider
+createSlider(leftArrow2, rightArrow2, frame2, slider2);
