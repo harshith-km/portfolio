@@ -110,14 +110,17 @@ section{
     nav a{
         font-size: 1.5rem;
     }
-	nav .socialMedia{
-		display: flex;
-	}
+    nav .socialMedia{
+	display: flex;
+    }
     .active{
         background-color: rgb(230, 230, 230);
         border-radius: 1rem;
         color: black;
         font-weight: 600;
+    }
+    main{
+        overflow-y: scroll;
     }
 }
 /* styles for 1081px or above  */
@@ -146,9 +149,6 @@ section{
     
 }
 @media(max-width:435px){
-    main{
-        overflow-y: scroll;
-    }
 	nav a{
 		font-size: 1.3rem;
 	}
