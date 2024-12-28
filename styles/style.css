@@ -59,10 +59,20 @@ nav a{
 nav a:hover{
     text-decoration: underline;
 }
-.contactMe{
-    display: flex;
+nav .socialMedia{
+    display: none;
     justify-content: center;
-    gap: 10px;
+    gap: 1rem;
+}
+nav .socialMedia a{
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: .5rem;
+}
+nav .socialMedia img{
+	width: 2.5rem;
 }
 .contactMe a{
     width: fit-content;
@@ -101,6 +111,9 @@ section{
     nav a{
         font-size: 1.5rem;
     }
+	nav .socialMedia{
+		display: flex;
+	}
     .active{
         background-color: rgb(230, 230, 230);
         border-radius: 1rem;
