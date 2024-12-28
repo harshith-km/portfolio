@@ -60,7 +60,6 @@ nav a:hover{
     text-decoration: underline;
 }
 nav .socialMedia{
-    display: none;
     justify-content: center;
     gap: 1rem;
 }
@@ -133,6 +132,9 @@ section{
         color: black;
         gap: 2rem;
     }
+	nav .socialMedia{
+		display: none;
+	}
     #openBtn , #closeBtn{
         display: none;
     }
