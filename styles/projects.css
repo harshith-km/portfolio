@@ -88,8 +88,6 @@
 	.slider{
 		width: 400px;
 		height: 268px;
-		background-color: red;
-
 	}
 	.arrow{
 		font-size: 1.5rem;
@@ -110,12 +108,10 @@
 	}
 	.sliderWrapper{
 		padding: 10px;
-		border: 1px solid red;
 	}
 	.slider{
 		width: 250px;
 		height: 168px;
-		background-color: red;
 	}
 	.arrow{
 		font-size: 1rem;
@@ -128,7 +124,6 @@
 	}
 	.projectsWrapper p{
 		font-size: 0.9rem;
-		border: 1px solid red;
 		word-break: break-all;
 		margin-bottom: 0.5rem;
 	}
