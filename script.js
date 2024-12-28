@@ -45,3 +45,33 @@ function handleSubmit(e) {
 
     console.log(mail);
 }
+
+// image sliding
+const left = document.getElementById("left");
+const right = document.getElementById("right");
+const frame = document.getElementById("frame");
+// const image = document.querySelectorAll("#image");
+const slider = document.getElementById("slider");
+const imgWidth = slider.clientWidth;
+
+let sliderPos = 0;
+
+right.addEventListener("click", () => {
+    if (sliderPos > -(11 * imgWidth)) {
+        sliderPos -= imgWidth;
+        frame.style.transform = `translateX(${sliderPos}px)`;
+    } else {
+        sliderPos = 0;
+        frame.style.transform = `translateX(${sliderPos}px)`;
+    }
+});
+
+left.addEventListener("click", () => {
+    if (sliderPos < 0) {
+        sliderPos += imgWidth;
+        frame.style.transform = `translateX(${sliderPos}px)`;
+    } else {
+        sliderPos = -11 * imgWidth;
+        frame.style.transform = `translateX(${sliderPos}px)`;
+    }
+});

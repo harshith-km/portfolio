@@ -1,77 +1,55 @@
+
 .projectsWrapper{
-    display: flex;
-    gap: 5rem;
-    justify-content: center;
+    width: 90%;
     height: 80%;
-    /* border: 3px solid blue; */
-}
-
-.wbms , .contentNest{
-    height: fit-content;
-    width: 45%;
     display: flex;
-    flex-direction: column;
-    padding: 25px;
-    border-radius: 15px;
+    justify-content: space-between;
+    /* border: 2px solid blue; */
+
+}
+.wbms, .contentNest{
+    width: 45%;
+    height: fit-content;
+    padding: 1.5rem;
     background-color: white;
-
-    box-shadow: 1rem 1rem 2rem rgba(111, 111, 111, 0.519);
-
-}   
+    border-radius: 1.5rem;
+}
 .contentNest{
     align-self: flex-end;
-}   
-.wbms h1, .contentNest h1{
-    align-self: center;
-    font-size: 2.5rem;
-    color: rgba(90, 90, 90);
-    margin-bottom: 1rem;
 }
-.wbms  img, .contentNest img{
-    width: 800px;   
-    height: 500px;
-}
-.wbms a, .contentNest a{
+.projectsWrapper a{
     font-size: 1.5rem;
-    /* font-weight: 600; */
-    /* font-family: 'airal narrow bold'; */
-    margin-top: 1rem;
-    color: darkblue;
-}
-.wbms a:hover, .contentNest a:hover{
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 1rem;
-    color: darkblue;
-}
-.wbms marquee, .contentNest marquee{
-    /* width: 900px; */
-    overflow: hidden;
-    transition-duration: 0.3s;
 }
 
-@media(max-width:1950px){
-    .wbms  img, .contentNest img{
-        width: 660px;
-        height: 400px;
-    }
-    .projectsWrapper{
-        flex-wrap: wrap;    
-        align-items: center;
-        justify-content: center;
-    }
+
+.sliderWrapper{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 25px;
+    border-radius: 1.5rem;
 }
-@media(max-width:950px){
-    .wbms , .contentNest{
-        height: fit-content;
-        width: 80%;
-    }   
-    .wbms span, .contentNest span{
-        font-size: 2rem;
-        font-weight: 600;
-    }
-    .wbms  img, .contentNest img{
-        width: 500px;
-        height: 375px;
-    }
+.arrow{
+    font-size: 3rem;
+}
+.arrow:hover{
+    cursor: pointer;
+}
+.slider{
+    width: 700px;
+    height: 470px;
+
+    overflow: hidden;
+    /* border: 2px solid red; */
+
+}
+.frame{
+    display: flex;
+    width: fit-content;
+
+}
+.frame img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }

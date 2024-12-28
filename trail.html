@@ -6,171 +6,92 @@
     <title>Document</title>
     <style>
         *{
-            margin: 0;
             padding: 0;
+            margin: 0;
             box-sizing: border-box;
-            text-decoration: none;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
         }
         body{
-            width: 100vw;
+            background-color: rgb(165, 165, 165);
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .sliderWrapper{
+            border: 2px solid blue;
+
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .arrow{
+            font-size: 3rem;
+        }
+        .arrow:hover{
+            cursor: pointer;
+        }
+        .slider{
+            width: 800px;
+            height: 500px;
+            background-color: white;
+
             overflow-x: hidden;
         }
-        header{
+        .frame{
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            max-height: 4rem;
         }
-        header button{
-            border: none;
-            padding: 0 10px;
-            background-color: transparent;
-            font-size: 2rem;
+        .frame img{
+            width: 100%;
+            height: 100%;
         }
-        #closeBtn{
-            display: none;
-        }
-
-        nav{
-            position: absolute;
-            right: calc(100vw * -1);
-            top: 4rem;
-            width: 90%;
-            padding: 3rem 0 0 0;
-            height: calc(100vh - 4rem);
-            border: 1px solid greenyellow;
-
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            transition: all 0.5s ease;
-        }
-        nav a{
-            font-size: 1.5rem;
-            border: 1px solid blueviolet;
-        }
-        .contactMe{
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .contactMe a{
-            width: fit-content;
-        }
-        main{
-            height: calc(100vh - 4rem); 
-            overflow-y:auto;
-        }
-        section{
-            background-color: greenyellow;
-            width: 100vw;
-            height: 100vh;
-        }
-
-
-
-       
-
-        /*  */
-        /* .navDesktop{
-            font-size: 1.4rem;
-            display: flex;
-
-            gap: 2rem;
-        }
-        .navDesktop a:hover{
-            text-decoration: underline;
-            font-weight: 500;
-        }
-        @media(max-width: 940px){
-            .navDesktop{
-                display: none;
-            }
-            #openBtn{
-                display: block;
-            }
-        }
-        @media(min-width: 941px) {
-            #openBtn , #closeBtn{
-                display: none;
-            }
-        } */
     </style>
 </head>
 <body>
-    <header>
-        <h1>Portfolio</h1>
-
-        <button id="openBtn" onclick="showMenu()">≡</button>
-        <button id="closeBtn" onclick="closeMenu()">×</button>
-
-        <!-- <div class="navDesktop">
-            <a  href="#Introduction">Introduction</a>
-            <a  href="#Skills">Skills</a>
-            <a  href="#Projects">Projects</a>
-            <a  href="#Certifications">Certifications & Coursework</a>
-            <a  href="#Education">Education</a>
-        </div> -->
-    </header>
-    <nav id="navMob">
-        <a onclick="closeMenu()"  href="#Introduction">Introduction</a>
-        <a onclick="closeMenu()"  href="#Skills">Skills</a>
-        <a onclick="closeMenu()"  href="#Projects">Projects</a>
-        <a onclick="closeMenu()"  href="#Certifications">Certifications & Coursework</a>
-        <a onclick="closeMenu()"  href="#Education">Education</a>
-
-        <div class="contactMe">
-            <a href="">LinkedIn</a>
-            <a href="">Gmail</a>
-            <a href="">GitHub</a>
+        <div class="sliderWrapper">
+            <div class="arrow left" id="left">❮</div>
+            <div class="slider">
+                <div class="frame" id="frame">
+                    <img src="./img/contentNest/CN-allblogs.png" alt="" id="image">
+                    <img src="./img/contentNest/CN-analytics.png" alt="" id="image">
+                    <img src="./img/contentNest/CN-chatting.png" alt="" id="image">
+                    <img src="./img/contentNest/CN-chatwithuser.png" alt="" id="image">
+                </div>
+            </div>
+            <div class="arrow right" id="right">❯</div>
         </div>
-    </nav>
-    <main>  
-        <section id="Introduction">
-            Introduction
-        </section>
-        <section id="Skills">
-            Skills
-        </section>
-        <section id="Projects">
-            Projects
-        </section>
-        <section id="Certifications">
-            Certifications
-        </section>
-        <section id="Education">
-            Education
-        </section>
 
-    </main>
-    
-    <script>
-
-        let activeTab = '';
-        const openBtn = document.getElementById("openBtn")
-        const closeBtn = document.getElementById("closeBtn")
-        const nav = document.getElementById('navMob')
+        <script>
 
 
-        function showMenu(){
-            openBtn.style.display = 'none'
-            closeBtn.style.display = 'block'
 
-            nav.style.right = '5px'
+            //image sliding
+            const left = document.getElementById("left")
+            const right = document.getElementById("right")
+            const frame = document.getElementById("frame")
+            const image = document.querySelectorAll("#image")
+            let sliderPos = 0
+                       
+             right.addEventListener("click" , () =>{
+                if(sliderPos >-((image.length-1) * 800) ){
+                    sliderPos -= 800
+                    frame.style.transform = `translateX(${sliderPos}px)`
+                }else{
+                    sliderPos = 0
+                    frame.style.transform = `translateX(${sliderPos}px)`
+                }
+             })
 
-        }
+             left.addEventListener("click" , () =>{
+                if(sliderPos < 0){
+                    sliderPos += 800
+                    frame.style.transform = `translateX(${sliderPos}px)`
+                }else{
+                    sliderPos = -((image.length-1) * 800) 
+                    frame.style.transform = `translateX(${sliderPos}px)`
+                }
+             })
 
-        function closeMenu(){
-            openBtn.style.display = 'block'
-            closeBtn.style.display = 'none'
 
-            nav.style.right = 'calc(100vw * -1)'
-
-        }
-
-    </script>
+        </script>
 </body>
 </html>
