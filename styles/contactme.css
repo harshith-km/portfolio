@@ -1,0 +1,56 @@
+.contactForm{
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 1rem 1rem 2rem rgba(111, 111, 111, 0.519);
+
+}
+.inputDiv{
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+.inputDiv label{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.inputDiv input{
+    width: 300px;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+    padding: 3px 10px;
+    background-color: rgb(210, 210, 210);
+}
+.textarea{
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm button{
+    padding: 5px;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: rgb(210, 210, 210);
+}
+.contactForm button:hover{
+   cursor: pointer;
+   background-color: rgb(220, 220, 220);
+}
+.contactForm button:active{
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+ }
+textarea{
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: 1.5rem;
+    background-color: rgb(210, 210, 210);
+    border: none;
+}

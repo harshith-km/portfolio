@@ -1,0 +1,45 @@
+#Introduction .introWrapper{
+    height: fit-content;
+    width: 70%;
+    min-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.introWrapper .avatar{
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    /* border-radius: 15% 2% ; */
+    border-radius: 2% 15% 2% 15%;
+}
+.introWrapper .profileDescription{
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    flex: 1;
+    box-shadow: 1rem 1rem 2rem rgba(111, 111, 111, 0.519);
+}
+.introWrapper .profileDescription p span{
+    font-weight: 600;
+}
+.profileDescription h1{
+    font-size: 3rem;
+    line-height: 6rem;
+}
+.profileDescription p{
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+}
+@media (max-width : 2100px){
+    #Introduction .introWrapper{
+        width: 90%;
+    }
+}
+@media (max-width : 1700px){
+    #Introduction .introWrapper{
+        flex-direction: column;
+        align-items: start;
+    }
+}
