@@ -15,11 +15,21 @@ function closeMenu() {
 }
 
 // for navgation styles
+// sections
+const Introduction = document.getElementById("Introduction");
+const Skills = document.getElementById("Skills");
+const Projects = document.getElementById("Projects");
+const Education = document.getElementById("Education");
+const contact = document.getElementById("contact");
+
+const sections = [Introduction, Skills, Projects, Education, contact];
+// nav elements
 const intro = document.getElementById("intro");
 const skills = document.getElementById("skills");
 const projects = document.getElementById("projects");
-const contactME = document.getElementById("contactME");
 const education = document.getElementById("education");
+const contactME = document.getElementById("contactME");
+
 const anchors = [intro, skills, projects, education, contactME];
 
 intro.className = "active";
@@ -28,6 +38,8 @@ function activate(val) {
         anchor.className = "";
     });
     anchors[val].className = "active";
+    sections[val].scrollIntoView({ behavior: "smooth" });
+    // anchor[val].scrollInto;
     if (window.innerWidth <= 1080) {
         closeMenu();
     }
@@ -46,41 +58,11 @@ function handleSubmit(e) {
     console.log(mail);
 }
 
-// image sliding
-// const left = document.getElementById("left");
-// const right = document.getElementById("right");
-// const frame = document.getElementById("frame");
-// // const image = document.querySelectorAll("#image");
-// const slider = document.getElementById("slider");
-// const imgWidth = slider.clientWidth;
-
-// let sliderPos = 0;
-
-// right.addEventListener("click", () => {
-//     if (sliderPos > -(11 * imgWidth)) {
-//         sliderPos -= imgWidth;
-//         frame.style.transform = `translateX(${sliderPos}px)`;
-//     } else {
-//         sliderPos = 0;
-//         frame.style.transform = `translateX(${sliderPos}px)`;
-//     }
-// });
-
-// left.addEventListener("click", () => {
-//     if (sliderPos < 0) {
-//         sliderPos += imgWidth;
-//         frame.style.transform = `translateX(${sliderPos}px)`;
-//     } else {
-//         sliderPos = -11 * imgWidth;
-//         frame.style.transform = `translateX(${sliderPos}px)`;
-//     }
-// });
-
 function createSlider(leftArrow, rightArrow, frame, slider) {
     const imgWidth = slider.clientWidth;
     let sliderPos = 0;
-    let autoSlideInterval;
 
+    let autoSlideInterval;
     const autoSlide = () => {
         if (sliderPos > -(11 * imgWidth)) {
             sliderPos -= imgWidth;
@@ -91,14 +73,14 @@ function createSlider(leftArrow, rightArrow, frame, slider) {
         }
     };
 
-    autoSlideInterval = setInterval(autoSlide, 1700); // Adjust interval as needed
+    autoSlideInterval = setInterval(autoSlide, 3000);
 
     slider.addEventListener("mouseover", () => {
         clearInterval(autoSlideInterval);
     });
 
     slider.addEventListener("mouseout", () => {
-        autoSlideInterval = setInterval(autoSlide, 1700);
+        autoSlideInterval = setInterval(autoSlide, 3000);
     });
 
     rightArrow.addEventListener("click", () => {
@@ -139,3 +121,5 @@ const slider2 = document.getElementById("slider-c");
 
 // Create the second slider
 createSlider(leftArrow2, rightArrow2, frame2, slider2);
+
+//

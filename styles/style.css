@@ -3,12 +3,20 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif sans-serif;
 }
+button,a{
+	cursor: pointer;
+}
+
 body{
     width: 100vw;
     overflow-x: hidden;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 header{
     position: relative;
 
@@ -35,6 +43,8 @@ nav{
     padding-top: 10px;
     align-items: center;
     justify-content: center;
+	z-index: 1000;
+
 }
 nav a{
     position: relative;
@@ -42,6 +52,9 @@ nav a{
     font-size: 1.5rem;
     font-weight: 500;
     color: white;
+
+    transition: all .7s ease;
+
 }
 nav a:hover{
     text-decoration: underline;
@@ -56,7 +69,6 @@ nav a:hover{
 }
 main{
     height: calc(100vh - 4rem);
-    /* overflow-y:auto; */
     overflow: hidden;
 }
 section{
@@ -65,7 +77,7 @@ section{
     justify-content: center;
     align-items: center;
     height: calc(100vh - 4rem);
-}
+	}
 
 /*styles for width of 1080px to 0px/ 1080px or lessthan 1080px*/
 @media(max-width: 1080px){
@@ -87,7 +99,7 @@ section{
         transition: all 0.5s ease;
     }
     nav a{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .active{
         background-color: rgb(230, 230, 230);
@@ -117,4 +129,12 @@ section{
         font-weight: 600;
     }
     
+}
+@media(max-width:435px){
+    main{
+        overflow-y: scroll;
+    }
+	nav a{
+		font-size: 1.3rem;
+	}
 }

@@ -1,238 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <a href="https://www.flaticon.com/free-icons/python" title="python icons"></a>
-
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/intro.css">
-    <link rel="stylesheet" href="./styles/skills.css">
-    <link rel="stylesheet" href="./styles/projects.css">
-    <link rel="stylesheet" href="./styles/education.css">
-    <link rel="stylesheet" href="./styles/contactme.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<a href="https://www.flaticon.com/free-icons/python" title="python icons"></a>
+	
+	<link rel="stylesheet" href="./styles/style.css">
+	<link rel="stylesheet" href="./styles/intro.css">
+	<link rel="stylesheet" href="./styles/skills.css">
+	<link rel="stylesheet" href="./styles/projects.css">
+	<link rel="stylesheet" href="./styles/education.css">
+	<link rel="stylesheet" href="./styles/contactme.css">
 </head>
 <body>
-    <header>
-        <h1>Portfolio</h1>
+	<header>
+		<h1>Portfolio</h1>
+		
+		<button id="openBtn" onclick="showMenu()">≡</button>
+		<button id="closeBtn" onclick="closeMenu()">×</button>
+		
+		<nav id="nav">
+			<a  id="intro" onclick="activate(0)" >Introduction</a>
+			<a  id="skills" onclick="activate(1)" >Skills</a>
+			<a  id="projects" onclick="activate(2)" >Projects</a>
+			<a  id="education" onclick="activate(3)" >Education</a>
+			<a  id="contactME" onclick="activate(4)">Contact Me</a>
+			<!-- <a  id="contactME" onclick="abc()" >Try</a> -->
+			
+			<div class="contactMe"> 
+			</div>
+		</nav>
+	</header>
+	<main id="main">      
+		<section id="Introduction">
+			<div class="introWrapper">
+				<div class="avatar">
+					<div class="socialMedia">
+						<a href="https://www.linkedin.com/in/harshith-km/"><img src="./img/linkedin.png" alt=""></a>
+						<a href="https://github.com/harshith-km/"><img src="./img/github copy.png" alt=""></a>
+						<a href="mailto:harshithkm2003@gmail.com?subject=Hello&body=Hi%20Harshith,%0A%0AHow%20are%20you?%0A%0ABest%20regards,%0A[Your%20Name]"> <img src="./img/gmail.png" alt=""></a>
+					</div>
+				</div>
+				<div class="profileDescription">
+					<h1>Hey guys 👋</h1>
+					<p>Recent BCA graduate with hands-on experience in building <span>full-stack web applications </span>
+						using Python, Flask, PHP and JavaScript. Skilled in creating user-friendly interfaces 
+						and scalable backend systems, with projects demonstrating real-time features and
+						predictive analytics. Passionate about leveraging technical expertise in data structures, 
+						web development and Linux customization to solve complex problems. Seeking a full-stack 
+						web developer role to contribute and grow in a dynamic environment.
+					</p>
+				</div>
+			</div>
+			
+			
+		</section>
 
-        <button id="openBtn" onclick="showMenu()">≡</button>
-        <button id="closeBtn" onclick="closeMenu()">×</button>
+		<section id="Skills">
+			<div class="skillsWrapper">
+				<div class="skillSet1 skillSet">
+					<div class="frontend skillCategory">
+						<h1>Web-Development(frontend)</h1>
+						<span><img src="./img/html.png" alt="">HTML</span>
+						<span><img src="./img/css.png" alt="">CSS</span>
+						<span><img src="./img/tailwind-css.png" alt="">Tailwind CSS</span>
+						<span><img src="./img/javascript.png" alt="">JavaScript</span>
+					</div>
+					<div class="Frameworks skillCategory">
+						<h1>Web-Development(frameworks)</h1>
+						<span><img src="./img/flask.png" alt="">Flask(python)</span>
+						<span>MERN </span>
+						<span><img src="./img/xampp.png" alt="">Web-development using PHP & MySQL</span>
+					</div>
+					
+				</div>
+				<div class="skillSet2 skillSet">
+					<div class="programmingLanguages skillCategory">
+						<h1>Programming Languages</h1>
+						<span><img src="./img/python.png" alt="">Python</span>
+						<span><img src="./img/javascript.png" alt="">JavaScript</span>
+						<span><img src="./img/php.png" alt="">PHP</span>
+						<span><img src="./img/c.png" alt="">C Programming</span>
+					</div>       
+					<div class="database skillCategory">
+						<h1>Database</h1>
+						<span><img src="./img/mysql-database.png" alt="">SQL - MySQL</span>
+						<span><img src="./img/mongodb.png" alt="">NOSQL - MongoDB</span>
+					</div>
+				</div>            
+				<div class="skillSet3 skillSet">
+					<div class="developmentTools skillCategory">
+						<h1>Development-Tools</h1>
+						<span><img src="./img/git.png" alt="">Git</span>
+						<span><img src="./img/github.png" alt="">GitHub</span>
+						<span><img src="./img/vscode.png" alt="">VS-Code</span>
+						<span><img src="./img/pycharm.png" alt="">PyCharm</span>
+					</div>
+					
+					<div class="areasOfInterests skillCategory">
+						<h1>Areas of Interests</h1>
+						<span><img src="./img/DSA.png" alt="">Data Structure & Algorithms</span>
+						<span><img src="./img/linux.png" alt="">Linux Development</span>
+						<span><img src="./img/mobile-application.png" alt="">Mobile Application development</span>
+						<span><img src="./img/ai.png" alt="">Artificial Intelligence & Machine learning</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="Projects">
+			<div class="projectsWrapper">
+				<div class="wbms project">
+					<h1>Water Wise</h1>
+					<div class="sliderWrapper">
+						<div class="arrow left" id="left-w">❮</div>
+						<div class="slider" id="slider-w">
+							<div class="frame" id="frame-w">
+								<img src="./img/wbms/wbms-login.png" alt="" id="image">
+								<img src="./img/wbms/wbms-register.png" alt="" id="image">
+								<img src="./img/wbms/wbms-dashboard.png" alt="" id="image">
+								<img src="./img/wbms/wbms-viewBill.png" alt="" id="image">
+								<img src="./img/wbms/wbms-viewBill-bill.png" alt="" id="image">
+								<img src="./img/wbms/wbms-view-analytics.png" alt="" id="image">
+								<img src="./img/wbms/wbms wallet.png" alt="" id="image">
+								<img src="./img/wbms/wbms-callback-request.png" alt="" id="image">
+								<img src="./img/wbms/wbms-callbackrequests-data.png" alt="" id="image">
+								<img src="./img/wbms/wbms-callbackrequests-view application id.png" alt="" id="image">
+								<img src="./img/wbms/wbms-settings-update user info.png" alt="" id="image">
+								<img src="./img/wbms/wbms-settings-feedback.png" alt="" id="image">
+							</div>
+						</div>
+						<div class="arrow right" id="right-w">❯</div>
+					</div>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum eaque pariatur similique illo corrupti iste voluptate nesciunt debitis error, tempora dolor et minima asperiores, officia eum ipsam recusandae reprehenderit animi eveniet cupiditate commodi explicabo. Eveniet itaque omnis delectus eaque laudantium magnam labore aperiam? Non possimus officia nostrum eos eveniet aperiam?</p>
+					<a href="https://github.com/harshith-km/water-wise">> GitHub: Source Code</a>
+				</div>
+				
+				
+				<div class="contentNest project">
+					<h1>Content Nest</h1>
+					<div class="sliderWrapper">
+						<div class="arrow left" id="left-c">❮</div>
+						<div class="slider" id="slider-c">
+							<div class="frame" id="frame-c">
+								<img src="./img/contentNest/login.png" alt="" id="image">
+								<img src="./img/contentNest/home.png" alt="" id="image">
+								<img src="./img/contentNest/following.png" alt="" id="image">
+								<img src="./img/contentNest/writeblog.png" alt="" id="image">
+								<img src="./img/contentNest/savedblogs.png" alt="" id="image">
+								<img src="./img/contentNest/publishedblogs.png" alt="" id="image">
+								<img src="./img/contentNest/analytics.png" alt="" id="image">
+								<img src="./img/contentNest/chatting.png" alt="" id="image">
+								<img src="./img/contentNest/chatwithuser.png" alt="" id="image">
+								<img src="./img/contentNest/notifications.png" alt="" id="image">
+								<img src="./img/contentNest/viewblog.png" alt="" id="image">
+								<img src="./img/contentNest/viewuser.png" alt="" id="image">
+							</div>
+						</div>
+						<div class="arrow right" id="right-c">❯</div>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eveniet vero ratione iure provident? Nobis totam deserunt repudiandae quae consequuntur praesentium cumque ratione ipsam suscipit iste dolorem sint blanditiis maxime iure minus corrupti rerum excepturi voluptas, odit exercitationem, recusandae officiis sapiente voluptates! Fuga sint sed a. Autem aliquid dicta harum!</p>
+					<a href="https://github.com/harshith-km/content-nest">> GitHub: Source Code</a>
+				</div>
+			</div>
+		</section> 
 
-        <nav id="nav">
-            <a  id="intro" onclick="activate(0)" href="#Introduction">Introduction</a>
-            <a  id="skills" onclick="activate(1)" href="#Skills">Skills</a>
-            <a  id="projects" onclick="activate(2)" href="#Projects">Projects</a>
-            
-            <a  id="education" onclick="activate(3)"  href="#Education">Education</a>
-            <a  id="contactME" onclick="activate(4)" href="#contact">Contact Me</a>
+		<section id="Education">
+			<div class="educationWrapper">
+				<div class="bca">
+					<div class="duration">
+						<span>OCT - 2021</span>
+						<div class="durationLine"></div>
+						<span>AUG - 2024</span>
+					</div>
+					<div class="description">
+						<h1>Government First Grade College, Tumkur</h1>
+						<h3>Bachelor of Computer Applications</h3> <span class="cgpa">CGPA: 7.89/10</span>
+					</div>
+					
+				</div>
+				
+				<div class="pcmc">
+					<div class="duration">
+						<span>JUN - 2019</span>
+						<div class="durationLine"></div>
+						<span>APR - 2021</span>
+					</div>
+					<div class="description">
+						<h1>Sree Siddaganga PU College, Tumkur</h1>
+						<h3>PCM - Computer Science </h3> <span class="cgpa">CGPA: 8.0/10</span>
+					</div>
+				</div>
+			</div>
+		</section>
 
-            <div class="contactMe"> 
-            </div>
-        </nav>
-    </header>
-    <main>      
-        <section id="Introduction">
-            <div class="introWrapper">
-                <div class="avatar">
+		<section id="contact">
+			<form onsubmit="handleSubmit(event)" class="contactForm">
+				<h1>Contact ME</h1>
+				<div class="inputDiv">
+					<label for="">Name *</label>
+					<input type="text" id="name">
+				</div>
+				<div class="inputDiv">
+					<label for="">Phone No</label>
+					<input type="text" id="phoneNo">
+				</div>
+				<div class="inputDiv">
+					<label for="">Email *</label>
+					<input type="text" id="email">
+				</div>
+				<div class="inputDiv textarea">
+					<label for="">Description</label>
+					<textarea type="text" id="description" rows="7"> </textarea>
+				</div>
+				<button type="submit">Submit</button>
+			</form>
+		</section> 
+	</main>
 
-                    <div class="socialMedia">
-                        <a href="https://www.linkedin.com/in/harshith-km/"><img src="./img/linkedin.png" alt=""></a>
-                        <a href="https://github.com/harshith-km/"><img src="./img/github copy.png" alt=""></a>
-                        <a href="mailto:harshithkm2003@gmail.com?subject=Hello&body=Hi%20Harshith,%0A%0AHow%20are%20you?%0A%0ABest%20regards,%0A[Your%20Name]"> <img src="./img/gmail.png" alt=""></a>
 
-                       
-                    </div>
-                </div>
-                
-                <div class="profileDescription">
-                    <h1>Hey guys 👋</h1>
-                    <p>Recent BCA graduate with hands-on experience in building <span>full-stack web applications </span>
-                        using Python, Flask, PHP and JavaScript. Skilled in creating user-friendly interfaces 
-                        and scalable backend systems, with projects demonstrating real-time features and
-                        predictive analytics. Passionate about leveraging technical expertise in data structures, 
-                        web development and Linux customization to solve complex problems. Seeking a full-stack 
-                        web developer role to contribute and grow in a dynamic environment.
-                    </p>
-                </div>
-            </div>
-            
-        </section>
-       
-       
-        <section id="Skills">
-            <div class="skillsWrapper">
-                <div class="skillSet1">
-                    <div class="frontend">
-                        <h1>Web-Development(frontend)</h1>
-                            <span><img src="./img/html.png" alt="">HTML</span>
-                            <span><img src="./img/css.png" alt="">CSS</span>
-                            <span><img src="./img/tailwind-css.png" alt="">Tailwind CSS</span>
-                            <span><img src="./img/javascript.png" alt="">JavaScript</span>
-                    </div>
-                    <div class="Frameworks">
-                        <h1>Web-Development(frameworks)</h1>
-                            <span><img src="./img/flask.png" alt="">Flask(python)</span>
-                            <span>MERN </span>
-                            <span><img src="./img/xampp.png" alt="">Web-development using PHP & MySQL</span>
-                    </div>
+<script>
+// const main = document.getElementById("main");
 
-                </div>
-                <div class="skillSet2">
-                    <div class="programmingLanguages">
-                        <h1>Programming Languages</h1>
-                            <span><img src="./img/python.png" alt="">Python</span>
-                            <span><img src="./img/javascript.png" alt="">JavaScript</span>
-                            <span><img src="./img/php.png" alt="">PHP</span>
-                            <span><img src="./img/c.png" alt="">C Programming</span>
-                    </div>       
-                    <div class="database">
-                        <h1>Database</h1>
-                            <span><img src="./img/mysql-database.png" alt="">SQL - MySQL</span>
-                            <span><img src="./img/mongodb.png" alt="">NOSQL - MongoDB</span>
-                    </div>
-                </div>            
-                <div class="skillSet3">
-                    <div class="developmentTools">
-                        <h1>Development-Tools</h1>
-                            <span><img src="./img/git.png" alt="">Git</span>
-                            <span><img src="./img/github.png" alt="">GitHub</span>
-                            <span><img src="./img/vscode.png" alt="">VS-Code</span>
-                            <span><img src="./img/pycharm.png" alt="">PyCharm</span>
-                    </div>
+// const Introduction = document.getElementById("Introduction");
+// const Skills = document.getElementById("Skills");
+// const Projects = document.getElementById("Projects");
+// const Education = document.getElementById("Education");
+// const contact = document.getElementById("contact");
 
-                    <div class="areasOfInterests">
-                        <h1>Areas of Interests</h1>
-                            <span><img src="./img/DSA.png" alt="">Data Structure & Algorithms</span>
-                            <span><img src="./img/linux.png" alt="">Linux Development</span>
-                            <span><img src="./img/mobile-application.png" alt="">Mobile Application development</span>
-                            <span><img src="./img/ai.png" alt="">Artificial Intelligence & Machine learning</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+// const sections = [Introduction, Skills, Projects, Education, contact];
 
-        <section id="Projects">
-            <div class="projectsWrapper">
-                <div class="wbms">
-                    <h1>Water Wise</h1>
-                    <div class="sliderWrapper">
-                        <div class="arrow left" id="left-w">❮</div>
-                        <div class="slider" id="slider-w">
-                            <div class="frame" id="frame-w">
-                                <img src="./img/wbms/wbms-login.png" alt="" id="image">
-                                <img src="./img/wbms/wbms-register.png" alt="" id="image">
-                                <img src="./img/wbms/wbms-dashboard.png" alt="" id="image">
-                                <img src="./img/wbms/wbms-viewBill.png" alt="" id="image">
-                                <img src="./img/wbms/wbms-viewBill-bill.png" alt="" id="image">
-                                <img src="./img/wbms/wbms-view-analytics.png" alt="" id="image">
-                                <img src="./img/wbms/wbms wallet.png" alt="" id="image">
-                                <img src="./img/wbms/wbms-callback-request.png" alt="" id="image">
-                                <img src="./img/wbms/wbms-callbackrequests-data.png" alt="" id="image">
-                                <img src="./img/wbms/wbms-callbackrequests-view application id.png" alt="" id="image">
-                                <img src="./img/wbms/wbms-settings-update user info.png" alt="" id="image">
-                                <img src="./img/wbms/wbms-settings-feedback.png" alt="" id="image">
-                            </div>
-                        </div>
-                        <div class="arrow right" id="right-w">❯</div>
-                    </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum eaque pariatur similique illo corrupti iste voluptate nesciunt debitis error, tempora dolor et minima asperiores, officia eum ipsam recusandae reprehenderit animi eveniet cupiditate commodi explicabo. Eveniet itaque omnis delectus eaque laudantium magnam labore aperiam? Non possimus officia nostrum eos eveniet aperiam?</p>
-                    <a href="https://github.com/harshith-km/water-wise">> GitHub: Source Code</a>
-                </div>
-               
-                
-                <div class="contentNest">
-                    <h1>Content Nest</h1>
-                    <div class="sliderWrapper">
-                        <div class="arrow left" id="left-c">❮</div>
-                        <div class="slider" id="slider-c">
-                            <div class="frame" id="frame-c">
-                                <img src="./img/contentNest/login.png" alt="" id="image">
-                                <img src="./img/contentNest/home.png" alt="" id="image">
-                                <img src="./img/contentNest/following.png" alt="" id="image">
-                                <img src="./img/contentNest/writeblog.png" alt="" id="image">
-                                <img src="./img/contentNest/savedblogs.png" alt="" id="image">
-                                <img src="./img/contentNest/publishedblogs.png" alt="" id="image">
-                                <img src="./img/contentNest/analytics.png" alt="" id="image">
-                                <img src="./img/contentNest/chatting.png" alt="" id="image">
-                                <img src="./img/contentNest/chatwithuser.png" alt="" id="image">
-                                <img src="./img/contentNest/notifications.png" alt="" id="image">
-                                <img src="./img/contentNest/viewblog.png" alt="" id="image">
-                                <img src="./img/contentNest/viewuser.png" alt="" id="image">
-                            </div>
-                        </div>
-                        <div class="arrow right" id="right-c">❯</div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eveniet vero ratione iure provident? Nobis totam deserunt repudiandae quae consequuntur praesentium cumque ratione ipsam suscipit iste dolorem sint blanditiis maxime iure minus corrupti rerum excepturi voluptas, odit exercitationem, recusandae officiis sapiente voluptates! Fuga sint sed a. Autem aliquid dicta harum!</p>
-                    <a href="https://github.com/harshith-km/content-nest">> GitHub: Source Code</a>
-                </div>
-            </div>
-        </section>
-        <!-- <section id="Certifications">
-            <div class="certificationsWrapper">
-                    <span>Python</span>
-                    <span>Python Interview ready</span>
-                    <span>React JS</span>
-                    <span>MERN Stack</span>
-                    <span>Git Training</span>
-                    <span>Basic Data Structures and Algorithms</span>
-            </div>
-        </section> -->
-        <section id="Education">
-            <div class="educationWrapper">
-                <div class="bca">
-                    <div class="duration">
-                        <span>OCT - 2021</span>
-                        <div class="durationLine"></div>
-                        <span>AUG - 2024</span>
-                    </div>
-                    <div class="description">
-                        <h1>Government First Grade College, Tumkur</h1>
-                        <h3>Bachelor of Computer Applications</h3> <span class="cgpa">CGPA: 7.89/10</span>
-                    </div>
-                   <img src="" alt="">
+// let active = 0;
+// let isScrolling = false;
 
-                </div>
-                
-                <div class="pcmc">
-                    <div class="duration">
-                        <span>JUN - 2019</span>
-                        <div class="durationLine"></div>
-                        <span>APR - 2021</span>
-                    </div>
-                    <div class="description">
-                        <h1>Sree Siddaganga PU College, Tumkur</h1>
-                        <h3>PCM - Computer Science </h3> <span class="cgpa">CGPA: 8.0/10</span>
-                    </div>
-                    <img src="" alt="">
-                </div>
-            </div>
-        </section>
-        <section id="contact">
-            <form onsubmit="handleSubmit(event)" class="contactForm">
-                <h1>Contact ME</h1>
-                <div class="inputDiv">
-                    <label for="">Name *</label>
-                    <input type="text" id="name">
-                </div>
-                <div class="inputDiv">
-                    <label for="">Phone No</label>
-                    <input type="text" id="phoneNo">
-                </div>
-                <div class="inputDiv">
-                    <label for="">Email *</label>
-                    <input type="text" id="email">
-                </div>
-                <div class="inputDiv textarea">
-                    <label for="">Description</label>
-                    <textarea type="text" id="description" rows="7"> </textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-    </main>
-    
-    <script src="script.js" > </script>
+// main.addEventListener('wheel', function(event) {
+//     if (isScrolling) return; // Exit if already scrolling
+
+//     if (event.deltaY > 0 && active < sections.length - 1) {
+//         isScrolling = true;
+//         active++;
+//         sections[active].scrollIntoView({ behavior: "smooth" });
+//     } else if (event.deltaY < 0 && active > 0) {
+//         isScrolling = true;
+//         active--;
+//         sections[active].scrollIntoView({ behavior: "smooth" });
+//     }
+
+//     // Unlock scrolling after the animation completes
+//     setTimeout(() => {
+//         isScrolling = false;
+//     }, 700); // Adjust the timeout based on your scroll animation duration
+// });
+
+
+</script>
+<script src="script.js" > </script>
 </body>
 </html>

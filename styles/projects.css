@@ -1,32 +1,36 @@
 
 .projectsWrapper{
-    width: 90%;
+    width: 80%;
     height: 80%;
     display: flex;
     justify-content: space-between;
 }
-.wbms, .contentNest{
-    width: 45%;
+.project{
+	width: calc(700px + 6rem);
     height: fit-content;
     padding: 1.5rem;
     background-color: white;
     border-radius: 1.5rem;
+
+    box-shadow: 1rem 1rem 2rem rgba(100, 100, 100, 0.5);
+
 }
 .contentNest{
     align-self: flex-end;
 }
-.projectsWrapper a{
+.project a{
     font-size: 1.5rem;
     color: blue;
-    
 }
-.projectsWrapper p{
+
+.projectsWrapper p {
+	overflow-wrap: break-word; 
     margin-bottom: 1rem;
-}
+  }
 .projectsWrapper a:hover{
     font-weight: 600;
 }
-.projectsWrapper h1{
+.project h1{
     font-size: 2rem;
     width: 100%;
     text-align: center;
@@ -37,7 +41,6 @@
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
-    padding: 25px;
     border-radius: 1.5rem;
 }
 .arrow{
@@ -50,19 +53,84 @@
 .slider{
     width: 700px;
     height: 470px;
-
     overflow: hidden;
-
 }
 .frame{
     display: flex;
     width: fit-content;
-    transition: transform 0.7s ease-in-out;
+    transition: all 1s ease-in-out;
 
 }
 .frame img{
-    margin: 0;
-    padding: 0;
     width: 100%;
     border-radius: 10px;
+}
+
+@media(max-width:1440px){
+	.projectsWrapper{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 15px;
+	}
+	.project{
+		min-width: 60%;
+		width: fit-content;
+		align-items: center;
+	}
+	.contentNest{
+		align-self: center;
+	}
+	.sliderWrapper{
+		justify-content: center;
+	}
+	.slider{
+		width: 400px;
+		height: 268px;
+		background-color: red;
+
+	}
+	.arrow{
+		font-size: 1.5rem;
+	}
+	.projectsWrapper p{
+		width: 100%;
+		margin-bottom: 0.5rem;
+	}
+}
+
+@media(max-width:435px){
+	.projectsWrapper{
+		width: 100%;
+	}
+	.project{
+		padding: 10px 25px;
+		width: 100%;
+	}
+	.sliderWrapper{
+		padding: 10px;
+		border: 1px solid red;
+	}
+	.slider{
+		width: 250px;
+		height: 168px;
+		background-color: red;
+	}
+	.arrow{
+		font-size: 1rem;
+	}
+	.project h1{
+		font-size: 1.5rem;
+	}
+	.project a{
+		font-size: 1rem;
+	}
+	.projectsWrapper p{
+		font-size: 0.9rem;
+		border: 1px solid red;
+		word-break: break-all;
+		margin-bottom: 0.5rem;
+	}
+
 }

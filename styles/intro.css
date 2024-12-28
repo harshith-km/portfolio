@@ -11,8 +11,18 @@
     width: 500px;
     height: 400px;
     background-color: white;
-    /* border-radius: 15% 2% ; */
     border-radius: 2% 15% 2% 15%;
+
+	display: flex;
+	/* flex-direction: column; */
+    box-shadow: 1rem 1rem 2rem rgba(100, 100, 100, 0.5);
+
+}
+.introWrapper .socialMedia{
+	align-self: flex-end;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
 }
 .introWrapper .socialMedia img{
     width: 3rem;
@@ -22,7 +32,7 @@
     padding: 25px;
     border-radius: 15px;
     flex: 1;
-    box-shadow: 1rem 1rem 2rem rgba(111, 111, 111, 0.519);
+    box-shadow: 1rem 1rem 2rem rgba(100, 100, 100, 0.5);
 }
 .introWrapper .profileDescription p span{
     font-weight: 600;
@@ -36,13 +46,49 @@
     line-height: 2.3rem;
 }
 @media (max-width : 2100px){
-    #Introduction .introWrapper{
+ .introWrapper{
         width: 90%;
     }
 }
 @media (max-width : 1700px){
-    #Introduction .introWrapper{
+	 .introWrapper{
         flex-direction: column;
         align-items: start;
     }
 }
+
+
+@media(max-width:435px){
+    #introduction{
+        width: 100vw;
+    }
+    .introWrapper{
+        width: 100%;
+		/* border: 2px solid red; */
+
+    }
+    .introWrapper .avatar{
+		/* border: 2px solid greenyellow; */
+		width: 320px;
+		height: 320px;
+		/* height: ; */
+	        /* background-color: blue; */
+    }
+    .socialMedia img{
+        width: 1rem;
+    }
+    .profileDescription{
+        width: 80%;
+        padding: 10px;
+
+    }
+    .profileDescription h1{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .profileDescription p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+

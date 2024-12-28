@@ -1,23 +1,16 @@
-#Education{
-    
-}
 .educationWrapper{
         display: flex;
         flex-direction: column;
         gap: 3rem;
 }
 .bca, .pcmc{
-   
     background-color: white;
     padding: 25px;
     border-radius: 15px;
-
     display: flex;
     align-items: center;
     gap: 2rem;
-
-    box-shadow: 1rem 1rem 2rem rgba(111, 111, 111, 0.519);
-
+    box-shadow: 1rem 1rem 2rem rgba(100, 100, 100, 0.5);
 }
 .duration{
     width: fit-content;
@@ -32,7 +25,6 @@
     border-radius: 100vw;
 }
 .bca img, .pcmc img{
-
     background-color: gray;
 }
 
@@ -44,4 +36,23 @@
 }
 .cgpa{
     font-style: italic;
+}
+
+@media(max-width:435px){
+	.educationWrapper{
+		width: 100vw;
+		align-items: center;
+	}
+
+	.bca, .pcmc{
+		padding: 15px;
+		width: 90%;
+		gap: 0.4rem;
+	}
+	.description h1{
+		font-size: 1.3rem;
+	}
+	.description h3{
+		font-size: 1rem;
+	}
 }
