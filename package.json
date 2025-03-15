@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://harshithkm2003.github.io/portfolio",
+  "homepage": "https://harshith-km.github.io/portfolio",
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@testing-library/dom": "^10.4.0",
