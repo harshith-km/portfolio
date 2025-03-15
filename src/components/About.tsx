@@ -47,24 +47,6 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* Profile Photo */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="flex justify-center"
-            >
-              <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-secondary shadow-xl">
-                <img 
-                  src={`${process.env.PUBLIC_URL}/profilephoto.png`} 
-                  alt="Harshith KM" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/10 to-accent/10"></div>
-              </div>
-            </motion.div>
-
             {/* Personal Info Card */}
             <div className="card p-8">
               <h3 className="text-2xl font-bold mb-6 gradient-text">Personal Info</h3>

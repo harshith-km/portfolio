@@ -40,6 +40,10 @@ module.exports = {
       boxShadow: {
         'custom': '0 10px 30px -10px rgba(91, 33, 182, 0.3)',
       },
+      animation: {
+        'spin-slow': 'spin 15s linear infinite',
+        'spin-slower': 'spin 20s linear infinite reverse',
+      },
     },
   },
   plugins: [],
