@@ -113,9 +113,9 @@ const Hero: React.FC = () => {
             className="flex justify-center items-center mt-8 lg:mt-0"
           >
             <div className="relative">
-              {/* Decorative elements - only show on larger screens */}
-              <div className="absolute -z-10 w-60 h-72 md:w-72 md:h-88 rounded-xl border-2 border-dashed border-secondary/40 animate-spin-slow hidden md:block"></div>
-              <div className="absolute -z-10 w-64 h-80 md:w-80 md:h-96 rounded-xl border-2 border-dashed border-primary/30 animate-spin-slower hidden md:block"></div>
+              {/* Decorative elements - visible on all screens with adjusted sizes */}
+              <div className="absolute -z-10 w-56 h-72 md:w-72 md:h-88 rounded-xl border-2 border-dashed border-secondary/40 animate-spin-slow"></div>
+              <div className="absolute -z-10 w-60 h-80 md:w-80 md:h-96 rounded-xl border-2 border-dashed border-primary/30 animate-spin-slower"></div>
               
               {/* Profile image */}
               <div className="w-48 h-64 md:w-64 md:h-80 rounded-xl overflow-hidden border-4 border-secondary shadow-2xl">
