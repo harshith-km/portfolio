@@ -34,9 +34,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <span className="font-mono text-sm text-muted-foreground">
-            Built with React & TypeScript
-          </span>
+          
         </div>
       </div>
     </footer>

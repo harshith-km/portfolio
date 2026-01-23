@@ -48,7 +48,7 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-family: 'Space Grotesk', system-ui, sans-serif;
   }
 

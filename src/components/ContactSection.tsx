@@ -42,18 +42,18 @@ const ContactSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-4 mb-12"
+            className="flex flex-col items-center gap-4 mb-12 w-full"
           >
             <button
               onClick={copyEmail}
-              className="group flex items-center gap-4 px-6 py-4 bg-card border border-border hover:border-primary transition-all duration-300"
+              className="group flex items-center justify-center gap-2 sm:gap-4 px-3 sm:px-6 py-3 sm:py-4 bg-card border border-border hover:border-primary transition-all duration-300  max-w-md mx-auto overflow-hidden"
             >
-              <Mail size={20} className="text-primary" />
-              <span className="font-mono text-lg">{email}</span>
+              <Mail size={18} className="text-primary shrink-0 sm:w-5 sm:h-5" />
+              <span className="font-mono text-base sm:text-lg truncate">{email}</span>
               {copied ? (
-                <Check size={18} className="text-primary" />
+                <Check size={16} className="text-primary shrink-0 sm:w-[18px] sm:h-[18px]" />
               ) : (
-                <Copy size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                <Copy size={16} className="text-muted-foreground group-hover:text-primary transition-colors shrink-0 sm:w-[18px] sm:h-[18px]" />
               )}
             </button>
           </motion.div>
@@ -66,7 +66,7 @@ const ContactSection = () => {
           >
             <a
               href={`mailto:${email}`}
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-primary text-background font-medium text-lg hover:bg-primary/90 transition-all duration-300"
+              className="group inline-flex items-center gap-3 sm:px-4  px-8  py-2 sm:py-4 bg-primary text-background font-medium text-lg hover:bg-primary/90 transition-all duration-300"
             >
               <span>Say Hello</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -82,8 +82,8 @@ const ContactSection = () => {
           >
             <div>
               <div className="font-mono text-xs text-muted-foreground mb-1">Phone</div>
-              <a href="tel:+917760441296" className="text-foreground hover:text-primary transition-colors">
-                +91 77604 41296
+              <a href="tel:+919663538650" className="text-foreground hover:text-primary transition-colors">
+                +91 96635-38650
               </a>
             </div>
             <div>
