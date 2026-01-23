@@ -27,3 +27,9 @@ yarn-error.log*
 .vscode/
 *.swp
 *.swo
+
+# build output
+/dist
+
+# vite
+.vite
