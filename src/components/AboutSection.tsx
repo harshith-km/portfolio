@@ -11,7 +11,7 @@ const AboutSection = () => {
     { num: 2, content: <span className="ml-4">name:</span>, rest: <span className="code-string">"Harshith KM"</span>, comma: true },
     { num: 3, content: <span className="ml-4">location:</span>, rest: <span className="code-string">"Bangalore, India"</span>, comma: true },
     { num: 4, content: <span className="ml-4">education:</span>, rest: <span className="code-string">"BCA - Computer Applications"</span>, comma: true },
-    { num: 5, content: <span className="ml-4">focus:</span>, rest: <span className="code-string">"Full-Stack Development"</span>, comma: true },
+    { num: 5, content: <span className="ml-4">focus:</span>, rest: <span className="code-string">"Systems & Full-Stack Architecture"</span>, comma: true },
     { num: 6, content: <span className="ml-4">available:</span>, rest: <span className="text-primary">true</span> },
     { num: 7, content: '};' },
   ];
@@ -41,19 +41,20 @@ const AboutSection = () => {
             className="space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a developer who loves turning complex problems into simple, 
-              beautiful solutions. With a strong foundation in both frontend and 
-              backend technologies, I build applications that are fast, accessible, 
-              and user-friendly.
+              I design and build software end to end — web and mobile clients,
+              the backends behind them, and the infrastructure they run on. I've
+              shipped production systems for fintech, adtech, e-commerce and
+              logistics, several of them deployed and maintained on-premise.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My journey started with curiosity about how things work on the web. 
-              Today, I specialize in crafting full-stack applications using modern 
-              frameworks and best practices.
+              My work tends to sit where architecture matters: real-time data
+              pipelines, low-latency streaming, microservices, and the system
+              design decisions that decide whether a product holds up under load.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              When I'm not coding, you'll find me exploring Linux systems, 
-              diving into data structures, or experimenting with AI/ML concepts.
+              Outside client work I run my own homelab — self-hosting a stack of
+              services across a private mesh network — and build open-source
+              developer tools.
             </p>
           </motion.div>
 
